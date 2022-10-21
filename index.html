@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Discount Calculate</title>
+</head>
+<body>
+
+<div class="container">
+<h1>Discount Calculate</h1>
+    <table>
+        <tr>
+            <td class="title">Enter bill amount:</td>
+            <td> <input type="text" id="mainPrice"></td>
+        </tr>
+        <tr>
+            <td class="title">Type discount %</td>
+            <td><input type="text" onkeyup="calculate(this.value)"></td>
+        </tr>
+        <tr>
+            <td class="title">Discount amount:</td>
+            <td> <input type="text" id="disAmount"></td>
+        </tr>
+        <tr>
+            <td class="title">Final pay:</td>
+            <td> <input type="text" id="totalPrice"></td>
+        </tr>
+    </table>
+</div>
+
+
+<!-- Javascript code start -->
+<script>
+    function calculate(value){
+            var billAmt=document.getElementById("mainPrice").value;
+                var discountAmt=billAmt*value/100;
+                document.getElementById("disAmount").value=discountAmt;
+                var finalAmt=billAmt-discountAmt;
+                document.getElementById("totalPrice").value=finalAmt;
+        }
+
+
+        // function myfunction(value1,value2){
+        //     var a=value1 + " love " +value2 ;
+        //         console.log(a);
+        // }
+        // myfunction("I","You");
+
+        // function myfun(){
+        //     console.log("Front End Web Developer")
+        // }
+        // myfun();
+</script>
+
+<!-- Javascript code end -->
+</body>
+</html>
